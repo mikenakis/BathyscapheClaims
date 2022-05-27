@@ -67,8 +67,8 @@
 					<version>3.4.0</version>
 					<configuration>
 						<doclint>none</doclint>
-						<source>8</source>
-						<target>8</target>
+						<source>${maven.compiler.source}</source>
+						<target>${maven.compiler.source}</target>
 					</configuration>
 				</plugin>
 				<plugin>
@@ -103,13 +103,10 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.8.1</version>
 				<configuration>
-					<source>{maven.compiler.source}</source>
-					<target>{maven.compiler.source}</target>
+					<source>${maven.compiler.source}</source>
+					<target>${maven.compiler.source}</target>
 
 					<compilerArgs>
-
-						<!-- The "enable-preview" option "Enables preview features of the JVM". Since home projects of mine are all about experimentation, we want this. -->
-						<arg>--enable-preview</arg>
 
 						<!-- The "-parameters" option "Generates metadata for reflection on method parameters." That's good, we want this. -->
 						<arg>-parameters</arg>
@@ -120,10 +117,6 @@
 
 						<!-- The "-Xlint" option enables all recommended warnings. We will then suppress some that we have no use for. -->
 						<arg>-Xlint</arg>
-
-						<!-- The "preview" sub-option of the "Xlint" option will generate a warning for each use of a preview feature.  Since we are explicitly enabling preview
-						     features using the "enable-preview" compiler argument, this sub-option is entirely useless, so we disable it. -->
-						<arg>-Xlint:-preview</arg>
 
 						<!-- The "try" sub-option of the "Xlint" option is mind-bogglingly stupid.
 							It lives in a simplistic world in which resources are always created, used, and disposed within a single function, so it aims to warn you that you
