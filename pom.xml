@@ -161,4 +161,19 @@
 	<dependencies>
 		<!-- yay! no dependencies! -->
 	</dependencies>
+
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>GitHub MikeNakis BathyscapheClaims</name>
+			<!-- PEARL: In the 'mikenakis/BathyscapheClaims' part, there be magic: in GitHub, the name of the artifact repository must match the name of the source code repository. -->
+			<url>https://maven.pkg.github.com/mikenakis/BathyscapheClaims</url>
+		</repository>
+		<snapshotRepository>
+			<id>repsy-mikenakis-public</id>
+			<name>Repsy MikeNakis Bathyscaphe</name>
+			<url>https://repo.repsy.io/mvn/mikenakis/mikenakis-public</url>
+		</snapshotRepository>
+	</distributionManagement>
+
 </project>
