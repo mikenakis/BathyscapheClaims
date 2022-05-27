@@ -84,8 +84,7 @@
 						<!-- magical incantations from https://github.com/gh-a-sample/github-actions-maven-release-sample -->
 						<scmCommentPrefix>[ci skip]</scmCommentPrefix>
 						<tagNameFormat>@{project.version}</tagNameFormat>
-						<!-- do not run any tests when releasing. Normal build should have taken care of that. (Besides, due to randomness introduced by hashing, the tests
-						     may make slight modifications to the prints, so the release will fail due to local modifications.) -->
+						<!-- do not run any tests when releasing. Normal build should have taken care of that. -->
 						<arguments>-Dmaven.test.skip</arguments>
 					</configuration>
 				</plugin>
@@ -171,7 +170,7 @@
 		</repository>
 		<snapshotRepository>
 			<id>repsy-mikenakis-public</id>
-			<name>Repsy MikeNakis Bathyscaphe</name>
+			<name>Repsy MikeNakis BathyscapheClaims</name>
 			<url>https://repo.repsy.io/mvn/mikenakis/mikenakis-public</url>
 		</snapshotRepository>
 	</distributionManagement>
