@@ -1,0 +1,49 @@
+name: Release-Workflow
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: "The branch to checkout when making the release."
+        required: true
+        default: "master"
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, '[ci skip]')"
+
+    steps:
+      - name: Checkout-Source-Code-Step
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.inputs.branch }}
+
+      - name: Set-up-JDK-Step
+        uses: actions/setup-java@v1
+        with:
+          java-version: 17
+          # distribution: 'zulu'
+
+      - name: Cache-local-Maven-repository-Step
+        uses: actions/cache@v2
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+
+      - name: Configure-Git-User-Step
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+
+      - name: Release-Step
+        run: |
+          # this magical incantation is supposed to make the script fail if mvn fails; otherwise, the script will not fail unless grep fails.
+          set -o pipefail
+          mvn --batch-mode release:prepare release:perform --settings .github/mvn-settings.xml | grep -v 'Download.* http'
+        env:
+          #          CI_DEPLOY_USERNAME: ${{ secrets.CI_DEPLOY_USERNAME }}
+          #          CI_DEPLOY_PASSWORD: ${{ secrets.CI_DEPLOY_PASSWORD }}
+          GITHUB_ACTOR: ${{ github.actor }}
+          GITHUB_TOKEN: ${{ github.token }}
