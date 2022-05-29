@@ -1,7 +1,7 @@
 <!--
   ~ Copyright (c) 2022 Michael Belivanakis a.k.a. MikeNakis, michael.gr
   ~
-  ~ For licensing information, please see LICENSE.txt.
+  ~ For licensing information, please see LICENSE.md.
   ~ You may not use this file except in compliance with the license.
   -->
 
@@ -9,7 +9,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>io.github.mikenakis</groupId>
-	<artifactId>bathyscaphe-claims2</artifactId>
+	<artifactId>bathyscaphe-claims</artifactId>
 	<version>1.6-SNAPSHOT</version>
 
 
@@ -19,7 +19,7 @@
 
 
 
-	<name>mikenakis:bathyscaphe-claims</name>
+	<name>BathyscapheClaims</name>
 	<description>Annotations and interfaces to use in your code for interoperability with io.github.mikenakis:Bathyscaphe</description>
 	<url>https://github.com/mikenakis/BathyscapheClaims</url>
 
