@@ -2,7 +2,7 @@
 
 [![CI-Workflow status badge       ](https://img.shields.io/github/workflow/status/mikenakis/BathyscapheClaims/CI-Workflow?label=CI-Workflow&logo=github)](https://github.com/mikenakis/BathyscapheClaims/actions/workflows/ci.yml)
 [![Release-Workflow status badge  ](https://img.shields.io/github/workflow/status/mikenakis/BathyscapheClaims/Release-Workflow?label=Release-Workflow&logo=github)](https://github.com/mikenakis/BathyscapheClaims/actions/workflows/release.yml)
-[![IntelliJ IDEA badge            ](https://img.shields.io/badge/built_with-IntelliJ_IDEA-blue?logo=intellijIdea&logoColor=pink)](#;)
+[![IntelliJ IDEA badge            ](https://img.shields.io/badge/built_with-IntelliJ_IDEA-blue?logo=intellijIdea&logoColor=pink&color=pink)](#;)
 [![Number of files badge          ](https://img.shields.io/github/search/mikenakis/BathyscapheClaims/java?label=files&logo=files&logoColor=yellow)](#;)
 [![Repository Size badge          ](https://img.shields.io/github/languages/count/mikenakis/BathyscapheClaims)](#;)
 [![Language badge                 ](https://img.shields.io/github/languages/top/mikenakis/BathyscapheClaims)](#;)
@@ -37,5 +37,5 @@ Copyright © 2022, Michael Belivanakis, a.k.a. MikeNakis, michael.gr
 
 ## License
 
-This module is licensed under the MIT License. 
-For the full text of the license, see LICENSE.txt
+- This module is licensed under the MIT License. 
+- For the full text of the license, see [LICENSE.txt](LICENSE.txt)
