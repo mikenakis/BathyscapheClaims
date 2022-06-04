@@ -164,8 +164,6 @@
 				</configuration>
 			</plugin>
 		</plugins>
-
-		<sourceDirectory>source</sourceDirectory>
 	</build>
 
 	<distributionManagement>
