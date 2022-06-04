@@ -27,7 +27,7 @@
 
 ## Description
 
-This module defines annotations, interfaces, etc. that you can use to make your code interoperable with Bathyscaphe.
+This module defines annotations, interfaces, etc. that you can use to make your code interoperable with [github.com/mikenakis/Bathyscaphe](https://github.com/mikenakis/Bathyscaphe).
 
 For more information, see the Bathyscaphe project: https://github.com/mikenakis/Bathyscaphe
 
