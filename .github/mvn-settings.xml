@@ -7,18 +7,6 @@
 
 <settings>
 
-	<profiles>
-		<profile>
-			<id>github</id>
-			<repositories>
-				<repository>
-					<id>github</id>
-					<url>https://maven.pkg.github.com/mikenakis</url>
-				</repository>
-			</repositories>
-		</profile>
-	</profiles>
-
 	<servers>
 		<server>
 			<id>github</id>
