@@ -12,5 +12,10 @@
 			<username>${env.GITHUB_ACTOR}</username>
 			<password>${env.GITHUB_TOKEN}</password>
 		</server>
+		<server>
+			<id>repsy-mikenakis-public</id>
+			<username>mikenakis</username>
+			<password>${REPSY_PASS}</password>
+		</server>
 	</servers>
 </settings>
