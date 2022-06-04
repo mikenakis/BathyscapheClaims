@@ -168,12 +168,12 @@
 
 	<distributionManagement>
 		<repository>
-			<id>github</id>
+			<id>github-bathyscaphe-claims</id>
 			<!-- PEARL: In the 'mikenakis/BathyscapheClaims' part, there be magic: in GitHub, the name of the artifact repository must match the name of the source code repository. -->
 			<url>https://maven.pkg.github.com/mikenakis/BathyscapheClaims</url>
 		</repository>
 		<snapshotRepository>
-			<id>github</id>
+			<id>github-bathyscaphe-claims</id>
 			<!-- PEARL: In the 'mikenakis/BathyscapheClaims' part, there be magic: in GitHub, the name of the artifact repository must match the name of the source code repository. -->
 			<url>https://maven.pkg.github.com/mikenakis/BathyscapheClaims</url>
 		</snapshotRepository>
