@@ -15,7 +15,7 @@
 		<server>
 			<id>repsy-mikenakis-public</id>
 			<username>mikenakis</username>
-			<password>${REPSY_PASS}</password>
+			<password>${env.REPSY_PASS}</password>
 		</server>
 	</servers>
 </settings>
