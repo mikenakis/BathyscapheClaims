@@ -38,9 +38,7 @@ jobs:
 
 
       - name: Build-Step
-        run: |
-          # maven
-          mvn --batch-mode clean deploy --settings .github/mvn-settings.xml
+        run: mvn clean deploy --batch-mode --settings .github/mvn-settings.xml
         env:
           GITHUB_ACTOR: ${{ github.actor }}
           GITHUB_TOKEN: ${{ github.token }}

@@ -41,7 +41,7 @@ jobs:
         run: |
           # this magical incantation is supposed to make the script fail if mvn fails; otherwise, the script will not fail unless grep fails.
           set -o pipefail
-          mvn --batch-mode release:prepare release:perform --settings .github/mvn-settings.xml
+          mvn release:prepare release:perform --batch-mode --settings .github/mvn-settings.xml
           # | grep -v 'Download.* http'
         env:
           #          CI_DEPLOY_USERNAME: ${{ secrets.CI_DEPLOY_USERNAME }}
