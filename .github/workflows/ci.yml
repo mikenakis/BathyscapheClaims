@@ -39,8 +39,6 @@ jobs:
 
       - name: The-Step
         run: |
-          echo A ${{ REPSY_PASS }}
-          echo B ${{ env.REPSY_PASS }}
           echo C $REPSY_PASS
           mvn clean deploy --batch-mode --settings .github/mvn-settings.xml
         env:
