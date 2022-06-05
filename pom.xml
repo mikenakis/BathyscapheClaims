@@ -68,8 +68,6 @@
 					<configuration>
 						<doclint>none</doclint>
 						<source>${maven.compiler.source}</source>
-						<target>${maven.compiler.source}</target>
-
 					</configuration>
 				</plugin>
 				<plugin>
@@ -84,13 +82,12 @@
 					<configuration>
 						<!-- magical incantations from https://github.com/gh-a-sample/github-actions-maven-release-sample -->
 						<scmCommentPrefix>[ci skip]</scmCommentPrefix>
-						<tagNameFormat>@{project.version}</tagNameFormat>
+						<tagNameFormat>v@{project.version}</tagNameFormat>
 						<!-- do not run any tests when releasing. Normal build should have taken care of that. -->
-
 						<arguments>-Dmaven.test.skip</arguments>
-						<checkModificationExcludes>
-							<checkModificationExclude>**</checkModificationExclude>
-						</checkModificationExcludes>
+<!--						<checkModificationExcludes>-->
+<!--							<checkModificationExclude>**</checkModificationExclude>-->
+<!--						</checkModificationExcludes>-->
 					</configuration>
 				</plugin>
 				<plugin>
@@ -109,7 +106,6 @@
 				<configuration>
 					<source>${maven.compiler.source}</source>
 					<target>${maven.compiler.source}</target>
-
 					<compilerArgs>
 
 						<!-- The "-parameters" option "Generates metadata for reflection on method parameters." That's good, we want this. -->
@@ -153,7 +149,6 @@
 							 - Note that -Xlint:-processing does not help at all in suppressing this warning.
 							 - Note that contrary to what the warning message says, the -proc:none option is not ignored, because the annoying directories are not created.	-->
 						<arg>-proc:none</arg>
-
 					</compilerArgs>
 				</configuration>
 			</plugin>

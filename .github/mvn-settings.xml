@@ -8,7 +8,7 @@
 <settings>
 	<servers>
 		<server>
-			<id>github</id>
+			<id>github-bathyscaphe-claims</id>
 			<username>${env.GITHUB_ACTOR}</username>
 			<password>${env.GITHUB_TOKEN}</password>
 		</server>
