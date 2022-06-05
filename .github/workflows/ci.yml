@@ -8,7 +8,7 @@ on:
       - master
 
 jobs:
-  build:
+  the_job:
     runs-on: ubuntu-latest
     if: "!contains(github.event.head_commit.message, '[ci skip]')"
 
@@ -22,7 +22,7 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: 17
-          distribution: 'zulu'
+          # distribution: 'zulu'
 
       - name: Cache-local-Maven-repository-Step
         uses: actions/cache@v2
@@ -32,13 +32,17 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-
 
+      - name: Configure-Git-User-Step
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
 
-
-
-
-
-      - name: Build-Step
-        run: mvn clean deploy --batch-mode --settings .github/mvn-settings.xml
+      - name: The-Step
+        run: |
+          echo A ${{ REPSY_PASS }}
+          echo B ${{ env.REPSY_PASS }}
+          echo C $REPSY_PASS
+          mvn clean deploy --batch-mode --settings .github/mvn-settings.xml
         env:
           GITHUB_ACTOR: ${{ github.actor }}
           GITHUB_TOKEN: ${{ github.token }}
