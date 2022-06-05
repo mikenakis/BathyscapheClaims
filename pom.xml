@@ -43,7 +43,6 @@
 		<url>https://github.com/mikenakis/BathyscapheClaims.git</url>
 		<connection>scm:git:${project.scm.url}</connection>
 		<developerConnection>scm:git:${project.scm.url}</developerConnection>
-		<tag>HEAD</tag>
 	</scm>
 
 	<properties>
