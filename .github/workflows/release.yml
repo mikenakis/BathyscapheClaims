@@ -38,9 +38,9 @@ jobs:
           git config user.name "GitHub Actions"
 
       - name: The-Step
-        run: |
-
-          mvn release:prepare release:perform --batch-mode --settings .github/mvn-settings.xml
         env:
           GITHUB_ACTOR: ${{ github.actor }}
           GITHUB_TOKEN: ${{ github.token }}
+          REPSY_PASS: ${{ secrets.REPSY_PASS }}
+        run: |
+          mvn release:prepare release:perform --batch-mode --settings .github/mvn-settings.xml
