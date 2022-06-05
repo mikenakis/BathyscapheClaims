@@ -10,7 +10,7 @@
 
 	<groupId>io.github.mikenakis</groupId>
 	<artifactId>bathyscaphe-claims</artifactId>
-	<version>1.14-SNAPSHOT</version>
+	<version>1.14</version>
 
 	<name>BathyscapheClaims</name>
 	<description>Annotations and interfaces to use in your code for interoperability with io.github.mikenakis:Bathyscaphe</description>
@@ -43,7 +43,8 @@
 		<url>https://github.com/mikenakis/BathyscapheClaims.git</url>
 		<connection>scm:git:${project.scm.url}</connection>
 		<developerConnection>scm:git:${project.scm.url}</developerConnection>
-	</scm>
+	  <tag>1.14</tag>
+  </scm>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
