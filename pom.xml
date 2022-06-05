@@ -43,8 +43,8 @@
 		<url>https://github.com/mikenakis/BathyscapheClaims.git</url>
 		<connection>scm:git:${project.scm.url}</connection>
 		<developerConnection>scm:git:${project.scm.url}</developerConnection>
-	  <tag>HEAD</tag>
-  </scm>
+		<tag>HEAD</tag>
+	</scm>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -172,11 +172,11 @@
 			<!-- PEARL: In the 'mikenakis/BathyscapheClaims' part, there be magic: in GitHub, the name of the artifact repository must match the name of the source code repository. -->
 			<url>https://maven.pkg.github.com/mikenakis/BathyscapheClaims</url>
 		</repository>
-<!--		<snapshotRepository>-->
-<!--			<id>github-bathyscaphe-claims</id>-->
-<!--			&lt;!&ndash; PEARL: In the 'mikenakis/BathyscapheClaims' part, there be magic: in GitHub, the name of the artifact repository must match the name of the source code repository. &ndash;&gt;-->
-<!--			<url>https://maven.pkg.github.com/mikenakis/BathyscapheClaims</url>-->
-<!--		</snapshotRepository>-->
+		<!--		<snapshotRepository>-->
+		<!--			<id>github-bathyscaphe-claims</id>-->
+		<!--			&lt;!&ndash; PEARL: In the 'mikenakis/BathyscapheClaims' part, there be magic: in GitHub, the name of the artifact repository must match the name of the source code repository. &ndash;&gt;-->
+		<!--			<url>https://maven.pkg.github.com/mikenakis/BathyscapheClaims</url>-->
+		<!--		</snapshotRepository>-->
 		<snapshotRepository>
 			<id>repsy-mikenakis-public</id>
 			<url>https://repo.repsy.io/mvn/mikenakis/mikenakis-public</url>
