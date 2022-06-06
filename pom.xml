@@ -53,6 +53,22 @@
 		<maven.compiler.target>8</maven.compiler.target>
 	</properties>
 
+	<distributionManagement>
+<!--		<repository>-->
+<!--			<id>github-bathyscaphe-claims</id>-->
+<!--			&lt;!&ndash; PEARL: In the 'mikenakis/BathyscapheClaims' part, there be magic: in GitHub, the name of the artifact repository must match the name of the source code repository. &ndash;&gt;-->
+<!--			<url>https://maven.pkg.github.com/mikenakis/BathyscapheClaims</url>-->
+<!--		</repository>-->
+		<repository>
+			<id>repsy-mikenakis-public</id>
+			<url>https://repo.repsy.io/mvn/mikenakis/mikenakis-public</url>
+		</repository>
+		<snapshotRepository>
+			<id>repsy-mikenakis-public</id>
+			<url>https://repo.repsy.io/mvn/mikenakis/mikenakis-public</url>
+		</snapshotRepository>
+	</distributionManagement>
+
 	<build>
 
 		<pluginManagement>
@@ -87,9 +103,10 @@
 						<tagNameFormat>@{project.version}</tagNameFormat>
 						<!-- do not run any tests when releasing. Normal build should have taken care of that. -->
 						<arguments>-Dmaven.test.skip</arguments>
-<!--						<checkModificationExcludes>-->
-<!--							<checkModificationExclude>**</checkModificationExclude>-->
-<!--						</checkModificationExcludes>-->
+						<!-- allow the release to proceed despite local modifications. Can be useful while troubleshooting. -->
+						<!-- <checkModificationExcludes>-->
+						<!--    <checkModificationExclude>**</checkModificationExclude>-->
+						<!-- </checkModificationExcludes>-->
 					</configuration>
 				</plugin>
 				<plugin>
@@ -172,22 +189,6 @@
 			</plugin>
 		</plugins>
 	</build>
-
-	<distributionManagement>
-<!--		<repository>-->
-<!--			<id>github-bathyscaphe-claims</id>-->
-<!--			&lt;!&ndash; PEARL: In the 'mikenakis/BathyscapheClaims' part, there be magic: in GitHub, the name of the artifact repository must match the name of the source code repository. &ndash;&gt;-->
-<!--			<url>https://maven.pkg.github.com/mikenakis/BathyscapheClaims</url>-->
-<!--		</repository>-->
-		<repository>
-			<id>repsy-mikenakis-public</id>
-			<url>https://repo.repsy.io/mvn/mikenakis/mikenakis-public</url>
-		</repository>
-		<snapshotRepository>
-			<id>repsy-mikenakis-public</id>
-			<url>https://repo.repsy.io/mvn/mikenakis/mikenakis-public</url>
-		</snapshotRepository>
-	</distributionManagement>
 
 	<dependencies>
 		<!-- yay! no dependencies! -->

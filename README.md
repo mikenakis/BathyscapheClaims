@@ -1,7 +1,7 @@
 # BathyscapheClaims
 
-[![CI-Workflow status badge       ](https://img.shields.io/github/workflow/status/mikenakis/BathyscapheClaims/CI-Workflow?label=CI-Workflow&logo=github)](https://github.com/mikenakis/BathyscapheClaims/actions/workflows/ci.yml)
-[![Release-Workflow status badge  ](https://img.shields.io/github/workflow/status/mikenakis/BathyscapheClaims/Release-Workflow?label=Release-Workflow&logo=github)](https://github.com/mikenakis/BathyscapheClaims/actions/workflows/release.yml)
+[![CI-Workflow status badge       ](https://img.shields.io/github/workflow/status/mikenakis/BathyscapheClaims/CI-Workflow?label=CI-Workflow&logo=github&cacheSeconds=0)](https://github.com/mikenakis/BathyscapheClaims/actions/workflows/ci.yml)
+[![Release-Workflow status badge  ](https://img.shields.io/github/workflow/status/mikenakis/BathyscapheClaims/Release-Workflow?label=Release-Workflow&logo=github&cacheSeconds=0)](https://github.com/mikenakis/BathyscapheClaims/actions/workflows/release.yml)
 [![IntelliJ IDEA badge            ](https://img.shields.io/badge/built_with-IntelliJ_IDEA-blue?logo=intellijIdea&logoColor=pink&color=pink)](#;)
 [![Number of files badge          ](https://img.shields.io/github/search/mikenakis/BathyscapheClaims/java?label=files&logo=files&logoColor=yellow)](#;)
 [![Repository Size badge          ](https://img.shields.io/github/languages/count/mikenakis/BathyscapheClaims)](#;)
