@@ -28,6 +28,7 @@
 
 	<developers>
 		<developer>
+			<id>michael.gr</id>
 			<name>Mike Nakis</name>
 			<email>pom.xml@michael.gr</email>
 			<organization>michael.gr</organization>
@@ -68,6 +69,7 @@
 					<configuration>
 						<doclint>none</doclint>
 						<source>${maven.compiler.source}</source>
+
 					</configuration>
 				</plugin>
 				<plugin>
@@ -82,7 +84,7 @@
 					<configuration>
 						<!-- magical incantations from https://github.com/gh-a-sample/github-actions-maven-release-sample -->
 						<scmCommentPrefix>[ci skip]</scmCommentPrefix>
-						<tagNameFormat>v@{project.version}</tagNameFormat>
+						<tagNameFormat>@{project.version}</tagNameFormat>
 						<!-- do not run any tests when releasing. Normal build should have taken care of that. -->
 						<arguments>-Dmaven.test.skip</arguments>
 <!--						<checkModificationExcludes>-->
@@ -108,6 +110,9 @@
 					<target>${maven.compiler.source}</target>
 					<compilerArgs>
 
+
+
+
 						<!-- The "-parameters" option "Generates metadata for reflection on method parameters." That's good, we want this. -->
 						<arg>-parameters</arg>
 
@@ -117,6 +122,10 @@
 
 						<!-- The "-Xlint" option enables all recommended warnings. We will then suppress some that we have no use for. -->
 						<arg>-Xlint</arg>
+
+
+
+
 
 						<!-- The "try" sub-option of the "Xlint" option is mind-bogglingly stupid.
 							It lives in a simplistic world in which resources are always created, used, and disposed within a single function, so it aims to warn you that you
