@@ -84,8 +84,6 @@
 					<version>3.4.0</version>
 					<configuration>
 						<doclint>none</doclint>
-						<source>${maven.compiler.source}</source>
-
 					</configuration>
 				</plugin>
 				<plugin>
